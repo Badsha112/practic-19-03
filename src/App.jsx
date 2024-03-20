@@ -1,5 +1,5 @@
 import "./App.css";
-import DaisyNav from "./assets/components/DaisyNav/DaisyNav";
+import LChart from "./assets/components/LineChart/LChart";
 import Navbar from "./assets/components/Navbar/Navbar";
 
 function App() {
@@ -7,10 +7,8 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <DaisyNav></DaisyNav>
-      
-      
+      <Navbar></Navbar>      
+      <LChart></LChart>
     </>
   );
 }

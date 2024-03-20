@@ -14,12 +14,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
+    <nav className="bg-stone-400 p-3">
       <div className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
-        {open === true ? <VscChromeClose></VscChromeClose>: <TfiMenuAlt></TfiMenuAlt>}
+        {open === true ? (
+          <VscChromeClose></VscChromeClose>
+        ) : (
+          <TfiMenuAlt></TfiMenuAlt>
+        )}
       </div>
 
-      <ul className="md:flex">
+      <ul
+        className={`md:flex absolute md:static duration-1000 ${
+          open ? 'top-12' : '-top-64'
+        } bg-stone-400 text-black p-2 rounded-3xl`}
+      >
         {routes.map(route => (
           <li key={route.id} className="mr-10 text-2xl font-bold">
             <a href={route.path}>{route.name}</a>
